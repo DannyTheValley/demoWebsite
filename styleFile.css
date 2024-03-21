@@ -9,8 +9,7 @@ body {
     padding: 0% 1%;
     overflow-x: hidden;
     line-height: 1.5;
-
-
+    background-color: var(--background-color);
 }
 
 :root {
@@ -18,30 +17,142 @@ body {
     --primary-color: rgb(216, 196, 182);
     --secondary-color: rgb(235, 227, 213);
     --support-color: rgb(96, 108, 93);
-    --text-white: rgb(255, 240, 240);
+    --text-white: rgb(255, 247, 247);
     --background-color: rgb(245, 239, 231);
+    --button-color: rgb(181, 171, 161);
 }
 
 .container {
-    display: grid;
-    grid-template-rows: repeat(4, 1fr);
     align-items: center;
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
 }
 
 header {
-    border: 1px red dotted;
+    background-color: var(--primary-color);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 1em 5%;
+}
+
+header h1 {
+    font-weight: 800;
+    font-size: 20px;
+    color: var(--text-white);
+}
+
+li,
+a,
+button {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--text-white);
+}
+
+.logo {
+    cursor: pointer;
+    margin-right: auto;
+}
+
+.nav_links {
+    text-decoration: none;
+}
+
+.nav_links li {
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.nav_links li a {
+    transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover {
+    color: rgb(192, 220, 244);
+}
+
+button {
+    padding: 9px 25px;
+    background-color: var(--button-color);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+button:hover {
+    background-color: var(--button-color);
+    opacity: 0.8;
+}
+
+
+#hero {
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    width: 95%;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    padding: 1em;
+}
+
+#hero h2 {
+    font-size: 40px;
+    font-weight: 500;
 }
 
 
 section {
-    border: 1px red dotted;
-    grid-template-rows: repeat(5, 1fr);
+    padding: 1em 0em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
 }
 
-div {
-    border: 1px red dotted;
+.context {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+
+#about_me {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: var(--secondary-color);
+    align-items: center;
+    padding: 20px 10%;
+    border-radius: 5px;
+}
+
+.me_info {
+    text-align: center;
+}
+
+.profil {
+    min-height: 170px;
+    min-width: 170px;
+}
+
+#services {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.service-item {
+    text-align: center;
+}
+
+.service {
+    min-height: 9rem;
+    min-width: 9rem;
 }
 
 footer {
-    border: 1px red dotted;
+    padding: 3em 5%;
+    background-color: var(--primary-color);
 }
