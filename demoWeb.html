@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <main class="container">
+    <main>
         <header>
             <h1 class="logo">website_name</h1>
             <nav>
@@ -22,7 +22,8 @@
         </header>
 
         <div id="hero">
-            <h2>Dette er hero innholdet</h2>
+            <h2>Dette er hero innholdet <br>
+            Her kan man skrive mye</h2>
             <p>Det kan inneholde alt fra bilde til tekst</p>
             <a href="#"><button>Mer info</button></a>
         </div>
@@ -73,6 +74,16 @@
             </div>
         </section>
 
+        <form onsubmit="sendEmail(); reset(); return false;">
+            <h3>KONTAKT MEG</h3>
+            <input type="text" id="name" placeholder="Ditt Navn" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="number" id="phone" placeholder="Telefon" required pattern="[0-9]{8}" />
+            <textarea id="message" rows="4" placeholder="Beskrivelse"></textarea>
+            <button type="submit">Send</button>
+
+        </form>
+
         <footer>
                 <ul class="footer_links">
                     <li><a href="#">Quick link</a></li>
@@ -87,6 +98,7 @@
                 </ul>
         </footer>
     </main>
+    <script src=" https://smtpjs.com/v3/smtp.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
